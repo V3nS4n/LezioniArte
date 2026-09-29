@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L'Anatomia delle Emoticon: Il Codice Visivo delle Emozioni</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        :root {
+            --bg-canvas: #FAF9F6;
+            --charcoal: #2D3436;
+            --accent-yellow: #FFD93D;
+            --accent-red: #FF6B6B;
+            --accent-blue: #4D96FF;
+            --accent-green: #6BCB77;
+            --accent-purple: #9D4EDD;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: var(--bg-canvas);
+            color: var(--charcoal);
+            scroll-behavior: smooth;
+        }
+
+        h1, h2, h3, h4, .font-display {
+            font-family: 'Fredoka', cursive, sans-serif;
+        }
+
+        .shadow-comic {
+            box-shadow: 4px 4px 0px rgba(45, 52, 54, 0.9);
+        }
+
+        .shadow-comic-lg {
+            box-shadow: 6px 6px 0px rgba(45, 52, 54, 0.9);
+        }
+
+        .border-comic {
+            border: 3px solid rgba(45, 52, 54, 0.9);
+        }
+
+        .badge-step {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 2.25rem;
+            height: 2.25rem;
+            border-radius: 9999px;
+            font-weight: 700;
+            border: 2px solid #2D3436;
+        }
+
+        /* Animated floating signs */
+        @keyframes float-sign {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-6px) rotate(4deg); }
+        }
+
+        .floating-element {
+            animation: float-sign 2.5s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="antialiased text-gray-800">
+
+    <!-- Sticky Nav -->
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b-2 border-gray-900 px-6 py-3">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <span class="text-2xl">🎨</span>
+                <span class="font-display font-bold text-xl tracking-wide text-gray-900">Lab Emoticon</span>
+            </div>
+            <div class="flex gap-4 sm:gap-6 text-sm font-semibold text-gray-600 overflow-x-auto">
+                <a href="#schema" class="hover:text-amber-500 transition-colors">I 3 Ingredienti</a>
+                <a href="#mixer" class="hover:text-amber-500 transition-colors">Simulatore LIM</a>
+                <a href="#dettaglio" class="hover:text-amber-500 transition-colors">Guida Segni</a>
+                <a href="#sfida" class="hover:text-amber-500 transition-colors">Consegna sul Foglio</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Header -->
+    <header class="pt-12 pb-14 px-6 text-center bg-amber-50/60 border-b-2 border-gray-900">
+        <div class="container mx-auto max-w-4xl">
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-200 border-2 border-gray-900 text-xs font-bold uppercase tracking-wider mb-5 shadow-comic">
+                <i class="fa-solid fa-lightbulb text-amber-800"></i> Disegno Base & Linguaggio Visivo
+            </div>
+            <h1 class="text-4xl sm:text-6xl font-extrabold text-gray-900 leading-tight mb-4">
+                Come nasce un'<span class="text-amber-500 underline decoration-wavy decoration-3 underline-offset-4">Emoticon</span>?
+            </h1>
+            <p class="text-lg sm:text-xl text-gray-700 max-w-2xl mx-auto leading-relaxed">
+                Prima di disegnare gli occhi o la bocca, ci sono <strong>tre scelte fondamentali</strong> che decidono cosa proverà chi guarda il nostro disegno.
+            </p>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-12 max-w-6xl space-y-16">
+
+        <!-- SEZIONE 1: IL TRIANGOLO DELLE 3 SCELTE -->
+        <section id="schema" class="space-y-8">
+            <div class="text-center max-w-3xl mx-auto">
+                <span class="text-amber-600 font-bold uppercase tracking-widest text-xs">Lo Schema Prima del Tratto</span>
+                <h2 class="text-3xl sm:text-4xl font-bold mt-1">I 3 Ingredienti dell'Espressione</h2>
+                <p class="text-gray-600 mt-2">Ogni volta che cambi una di queste caratteristiche, l'emozione cambia completamente significato!</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Ingrediente 1: FORMA -->
+                <div class="bg-white rounded-2xl p-6 border-comic shadow-comic flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="badge-step bg-amber-300">1</span>
+                            <span class="text-3xl">📐</span>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2">La Forma</h3>
+                        <p class="text-sm text-gray-600 mb-4">Lo "scheletro" esterno definisce il temperamento e l'energia del personaggio:</p>
+                        
+                        <div class="space-y-2.5 text-xs">
+                            <div class="p-2.5 rounded-xl bg-amber-50 border border-amber-200">
+                                <strong class="text-amber-900 block font-bold text-sm mb-0.5">🟡 Cerchio / Ovale:</strong>
+                                <span>Amichevole, pacifico, accogliente, morbido, innocuo.</span>
+                            </div>
+                            <div class="p-2.5 rounded-xl bg-red-50 border border-red-200">
+                                <strong class="text-red-900 block font-bold text-sm mb-0.5">🔺 Triangolo / Punte:</strong>
+                                <span>Pericolo, rabbia, aggressività, tensione o astuzia.</span>
+                            </div>
+                            <div class="p-2.5 rounded-xl bg-blue-50 border border-blue-200">
+                                <strong class="text-blue-900 block font-bold text-sm mb-0.5">🟦 Quadrato / Rettangolo:</strong>
+                                <span>Testardaggine, noia, blocco emotivo, rigidità o serietà.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-gray-200 text-xs italic text-gray-500">
+                        Domanda: «Il mio personaggio è morbido o rigido?»
+                    </div>
+                </div>
+
+                <!-- Ingrediente 2: COLORE -->
+                <div class="bg-white rounded-2xl p-6 border-comic shadow-comic flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="badge-step bg-rose-300">2</span>
+                            <span class="text-3xl">🎨</span>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2">Il Colore</h3>
+                        <p class="text-sm text-gray-600 mb-4">La temperatura cromatica comunica lo stato d'animo prima ancora che si vedano i tratti:</p>
+                        
+                        <div class="space-y-2.5 text-xs">
+                            <div class="p-2.5 rounded-xl bg-yellow-50 border border-yellow-200">
+                                <strong class="text-yellow-800 block font-bold text-sm mb-0.5">🟡 Giallo / Arancio:</strong>
+                                <span>Energia, felicità, calore, sorpresa spensierata.</span>
+                            </div>
+                            <div class="p-2.5 rounded-xl bg-red-50 border border-red-200">
+                                <strong class="text-red-800 block font-bold text-sm mb-0.5">🔴 Rosso intenso:</strong>
+                                <span>Furia incontenibile, imbarazzo (rossore) o passione.</span>
+                            </div>
+                            <div class="p-2.5 rounded-xl bg-blue-50 border border-blue-200">
+                                <strong class="text-blue-800 block font-bold text-sm mb-0.5">🔵 Blu / Azzurro:</strong>
+                                <span>Tristezza, freddezza, spavento gelido o solitudine.</span>
+                            </div>
+                            <div class="p-2.5 rounded-xl bg-emerald-50 border border-emerald-200">
+                                <strong class="text-emerald-800 block font-bold text-sm mb-0.5">🟢 Verde acido:</strong>
+                                <span>Nausea, disgusto, gelosia o invidia.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-gray-200 text-xs italic text-gray-500">
+                        Domanda: «Qual è la temperatura dell'emozione?»
+                    </div>
+                </div>
+
+                <!-- Ingrediente 3: SEGNI & CONTORNI -->
+                <div class="bg-white rounded-2xl p-6 border-comic shadow-comic flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="badge-step bg-sky-300">3</span>
+                            <span class="text-3xl">⚡</span>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2">Segni Grafici</h3>
+                        <p class="text-sm text-gray-600 mb-4">I simboli tipici del fumetto (detti <em>emanata</em>) che raccontano cosa succede nella mente:</p>
+                        
+                        <div class="space-y-2.5 text-xs">
+                            <div class="p-2.5 rounded-xl bg-gray-50 border border-gray-200 flex items-start gap-2">
+                                <span class="text-base">💧</span>
+                                <div>
+                                    <strong class="text-gray-900 font-bold block text-sm">Goccia di sudore:</strong>
+                                    <span>Ansia, imbarazzo, fatica mentale o sollievo.</span>
+                                </div>
+                            </div>
+                            <div class="p-2.5 rounded-xl bg-gray-50 border border-gray-200 flex items-start gap-2">
+                                <span class="text-base">❓ / ❗</span>
+                                <div>
+                                    <strong class="text-gray-900 font-bold block text-sm">Punti ? e !:</strong>
+                                    <span>Dubbio confuso, colpo di fulmine o allarme improvviso.</span>
+                                </div>
+                            </div>
+                            <div class="p-2.5 rounded-xl bg-gray-50 border border-gray-200 flex items-start gap-2">
+                                <span class="text-base">💢 / 💨</span>
+                                <div>
+                                    <strong class="text-gray-900 font-bold block text-sm">Vena o Fumo:</strong>
+                                    <span>Pressione che sta per esplodere, sbuffo o stizza.</span>
+                                </div>
+                            </div>
+                            <div class="p-2.5 rounded-xl bg-gray-50 border border-gray-200 flex items-start gap-2">
+                                <span class="text-base">✨ / 💫</span>
+                                <div>
+                                    <strong class="text-gray-900 font-bold block text-sm">Stelline o Spirali:</strong>
+                                    <span>Incanto meravigliato, stordimento o vertigine.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-gray-200 text-xs italic text-gray-500">
+                        Domanda: «Cosa si muove nell'aria attorno alla testa?»
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEZIONE 2: IL MIXER INTERATTIVO PER LA LIM -->
+        <section id="mixer" class="bg-amber-100/50 rounded-3xl p-6 sm:p-10 border-comic shadow-comic-lg">
+            <div class="text-center max-w-2xl mx-auto mb-8">
+                <span class="bg-gray-900 text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">Laboratorio da Proiettare</span>
+                <h2 class="text-3xl sm:text-4xl font-bold mt-3">Simulatore: Cambia i 3 Elementi</h2>
+                <p class="text-gray-600 text-sm sm:text-base mt-2">
+                    Fai clic sui pulsanti per cambiare <strong>Forma</strong>, <strong>Colore</strong> e <strong>Segni</strong>. Guarda come si trasforma l'espressione in tempo reale!
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                <!-- Preview Canvas / Display -->
+                <div class="lg:col-span-6 flex flex-col items-center justify-center p-6 bg-white rounded-2xl border-comic shadow-comic">
+                    <div class="relative w-64 h-64 sm:w-72 sm:h-72 flex items-center justify-center" id="avatarStage">
+                        
+                        <!-- Floating graphic signs (top right / left / above) -->
+                        <div id="signOverlayTop" class="absolute -top-4 text-3xl sm:text-4xl z-20 floating-element transition-all duration-300"></div>
+                        <div id="signOverlayRight" class="absolute -right-2 top-6 text-3xl sm:text-4xl z-20 floating-element transition-all duration-300"></div>
+                        <div id="signOverlayLeft" class="absolute -left-2 top-8 text-3xl sm:text-4xl z-20 floating-element transition-all duration-300"></div>
+
+                        <!-- Main Shape SVG -->
+                        <svg id="emojiSvg" class="w-full h-full drop-shadow-md transition-all duration-300" viewBox="0 0 200 200">
+                            <!-- Base Shape: dynamically updated via JS -->
+                            <g id="shapeContainer"></g>
+
+                            <!-- Face Features: Eyes, Eyebrows, Mouth -->
+                            <g id="faceFeatures"></g>
+                        </svg>
+                    </div>
+
+                    <!-- Description of current emotional state -->
+                    <div class="mt-6 text-center w-full bg-gray-50 rounded-xl p-3 border border-gray-200">
+                        <span class="text-xs uppercase font-bold text-gray-400 tracking-wider block">Risultato Emotivo</span>
+                        <h4 id="emotionTitle" class="text-xl font-bold text-gray-900 mt-0.5">Felicità Solare</h4>
+                        <p id="emotionDescription" class="text-xs text-gray-600 mt-1 max-w-sm mx-auto">
+                            Forma morbida + giallo caldo + stelline = Un'emozione gioiosa, aperta e amichevole.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Interactive Controls -->
+                <div class="lg:col-span-6 space-y-6">
+                    <!-- 1. Scegli Forma -->
+                    <div class="bg-white p-4 sm:p-5 rounded-2xl border-comic shadow-sm">
+                        <label class="block text-xs font-bold uppercase tracking-wider text-gray-500 mb-2.5">
+                            <span class="text-amber-500 mr-1">1.</span> Scegli la Forma (Struttura)
+                        </label>
+                        <div class="grid grid-cols-4 gap-2">
+                            <button onclick="setShape('circle')" class="shape-btn active-btn p-2 rounded-xl border-2 border-gray-900 bg-amber-100 hover:bg-amber-200 flex flex-col items-center text-xs font-bold transition-transform active:scale-95" data-shape="circle">
+                                <span class="text-xl mb-1">⚪</span> Cerchio
+                            </button>
+                            <button onclick="setShape('square')" class="shape-btn p-2 rounded-xl border-2 border-gray-300 hover:border-gray-900 hover:bg-gray-50 flex flex-col items-center text-xs font-bold transition-transform active:scale-95" data-shape="square">
+                                <span class="text-xl mb-1">⏹️</span> Quadrato
+                            </button>
+                            <button onclick="setShape('triangle')" class="shape-btn p-2 rounded-xl border-2 border-gray-300 hover:border-gray-900 hover:bg-gray-50 flex flex-col items-center text-xs font-bold transition-transform active:scale-95" data-shape="triangle">
+                                <span class="text-xl mb-1">🔺</span> Triangolo
+                            </button>
+                            <button onclick="setShape('blob')" class="shape-btn p-2 rounded-xl border-2 border-gray-300 hover:border-gray-900 hover:bg-gray-50 flex flex-col items-center text-xs font-bold transition-transform active:scale-95" data-shape="blob">
+                                <span class="text-xl mb-1">💧</span> Goccia
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- 2. Scegli Colore -->
+                    <div class="bg-white p-4 sm:p-5 rounded-2xl border-comic shadow-sm">
+                        <label class="block text-xs font-bold uppercase tracking-wider text-gray-500 mb-2.5">
+                            <span class="text-rose-500 mr-1">2.</span> Scegli il Colore (Temperatura)
+                        </label>
+                        <div class="flex flex-wrap gap-3">
+                            <button onclick="setColor('#FFD93D', 'Giallo Caldo')" class="color-btn w-10 h-10 rounded-full border-2 border-gray-900 shadow-sm transition-transform hover:scale-110 ring-4 ring-gray-900" style="background-color: #FFD93D;" title="Giallo (Felice/Neutro)" data-color="#FFD93D"></button>
+                            <button onclick="setColor('#FF6B6B', 'Rosso Furia / Imbarazzo')" class="color-btn w-10 h-10 rounded-full border-2 border-gray-900 shadow-sm transition-transform hover:scale-110" style="background-color: #FF6B6B;" title="Rosso (Rabbia/Vergogna)" data-color="#FF6B6B"></button>
+                            <button onclick="setColor('#4D96FF', 'Blu Tristezza / Gelo')" class="color-btn w-10 h-10 rounded-full border-2 border-gray-900 shadow-sm transition-transform hover:scale-110" style="background-color: #4D96FF;" title="Blu (Tristezza/Freddo)" data-color="#4D96FF"></button>
+                            <button onclick="setColor('#6BCB77', 'Verde Disgusto / Invidia')" class="color-btn w-10 h-10 rounded-full border-2 border-gray-900 shadow-sm transition-transform hover:scale-110" style="background-color: #6BCB77;" title="Verde (Nausea/Disgusto)" data-color="#6BCB77"></button>
+                            <button onclick="setColor('#9D4EDD', 'Viola Mistero / Malizia')" class="color-btn w-10 h-10 rounded-full border-2 border-gray-900 shadow-sm transition-transform hover:scale-110" style="background-color: #9D4EDD;" title="Viola (Cattiveria/Brivido)" data-color="#9D4EDD"></button>
+                            <button onclick="setColor('#FFA07A', 'Arancione Entusiasmo')" class="color-btn w-10 h-10 rounded-full border-2 border-gray-900 shadow-sm transition-transform hover:scale-110" style="background-color: #FFA07A;" title="Arancio (Iperattivo)" data-color="#FFA07A"></button>
+                        </div>
+                    </div>
+
+                    <!-- 3. Scegli Segni Grafici -->
+                    <div class="bg-white p-4 sm:p-5 rounded-2xl border-comic shadow-sm">
+                        <label class="block text-xs font-bold uppercase tracking-wider text-gray-500 mb-2.5">
+                            <span class="text-sky-500 mr-1">3.</span> Segni Grafici di Contorno (Emanata)
+                        </label>
+                        <div class="grid grid-cols-4 gap-2">
+                            <button onclick="setSign('sparkles')" class="sign-btn active-btn p-2 rounded-xl border-2 border-gray-900 bg-sky-100 hover:bg-sky-200 text-xs font-bold flex flex-col items-center transition-transform active:scale-95" data-sign="sparkles">
+                                <span class="text-lg">✨</span> Stelline
+                            </button>
+                            <button onclick="setSign('sweat')" class="sign-btn p-2 rounded-xl border-2 border-gray-300 hover:border-gray-900 hover:bg-gray-50 text-xs font-bold flex flex-col items-center transition-transform active:scale-95" data-sign="sweat">
+                                <span class="text-lg">💧</span> Goccia
+                            </button>
+                            <button onclick="setSign('question')" class="sign-btn p-2 rounded-xl border-2 border-gray-300 hover:border-gray-900 hover:bg-gray-50 text-xs font-bold flex flex-col items-center transition-transform active:scale-95" data-sign="question">
+                                <span class="text-lg">❓</span> Dubbio
+                            </button>
+                            <button onclick="setSign('anger')" class="sign-btn p-2 rounded-xl border-2 border-gray-300 hover:border-gray-900 hover:bg-gray-50 text-xs font-bold flex flex-col items-center transition-transform active:scale-95" data-sign="anger">
+                                <span class="text-lg">💢</span> Fumo / Rabbia
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Preset combinazioni rapide -->
+                    <div class="flex flex-wrap items-center gap-2 pt-2">
+                        <span class="text-xs font-bold text-gray-500">Provate insieme:</span>
+                        <button onclick="loadPreset('furia')" class="text-xs bg-red-100 hover:bg-red-200 text-red-800 font-bold py-1 px-3 rounded-full border border-red-300 transition-colors">
+                            😡 Rabbia Esplosiva
+                        </button>
+                        <button onclick="loadPreset('ansia')" class="text-xs bg-blue-100 hover:bg-blue-200 text-blue-800 font-bold py-1 px-3 rounded-full border border-blue-300 transition-colors">
+                            😰 Fredda Ansia
+                        </button>
+                        <button onclick="loadPreset('stupore')" class="text-xs bg-yellow-100 hover:bg-yellow-200 text-yellow-800 font-bold py-1 px-3 rounded-full border border-yellow-300 transition-colors">
+                            🤩 Meraviglia Pura
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEZIONE 3: IL VOCABOLARIO DEI SEGNI GRAFICI (FUMETTO) -->
+        <section id="dettaglio" class="space-y-8">
+            <div class="text-center max-w-2xl mx-auto">
+                <span class="text-sky-600 font-bold uppercase tracking-widest text-xs">Il Linguaggio del Fumetto</span>
+                <h2 class="text-3xl font-bold mt-1">Piccoli Segni, Grandi Significati</h2>
+                <p class="text-gray-600 mt-2">
+                    Aggiungere anche un solo segnetto vicino alla testa cambia del tutto la storia del personaggio:
+                </p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="bg-white p-4 rounded-xl border-comic shadow-sm text-center">
+                    <div class="text-3xl mb-2">💧</div>
+                    <h4 class="font-bold text-sm mb-1">Goccia di Sudore</h4>
+                    <p class="text-xs text-gray-500">
+                        Disegnata sulla tempia significa imbarazzo, sforzo estremo o paura di essere scoperti.
+                    </p>
+                </div>
+
+                <div class="bg-white p-4 rounded-xl border-comic shadow-sm text-center">
+                    <div class="text-3xl mb-2">⚡</div>
+                    <h4 class="font-bold text-sm mb-1">Linee a Zig-Zag</h4>
+                    <p class="text-xs text-gray-500">
+                        Sopra la testa o vicino agli occhi indicano shock, brivido improvviso o tensione elettrica.
+                    </p>
+                </div>
+
+                <div class="bg-white p-4 rounded-xl border-comic shadow-sm text-center">
+                    <div class="text-3xl mb-2">💫</div>
+                    <h4 class="font-bold text-sm mb-1">Stelle / Spirale</h4>
+                    <p class="text-xs text-gray-500">
+                        Che ruotano attorno indicano confusione, capogiro dopo un colpo o innamoramento cieco.
+                    </p>
+                </div>
+
+                <div class="bg-white p-4 rounded-xl border-comic shadow-sm text-center">
+                    <div class="text-3xl mb-2">♨️</div>
+                    <h4 class="font-bold text-sm mb-1">Sbuffi di Vapore</h4>
+                    <p class="text-xs text-gray-500">
+                        Dai "lati" o dal naso rappresentano una rabbia trattenuta a fatica o grande frustrazione.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEZIONE 4: CONSEGNA OPERATIVA SUL FOGLIO DA DISEGNO -->
+        <section id="sfida" class="bg-white p-8 sm:p-10 rounded-3xl border-comic shadow-comic-lg space-y-10">
+            
+            <div class="border-b-2 border-gray-200 pb-6 text-center sm:text-left flex flex-col sm:flex-row justify-between items-center gap-4">
+                <div>
+                    <span class="inline-block px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold uppercase mb-2">Consegna sul Foglio da Disegno</span>
+                    <h2 class="text-3xl sm:text-4xl font-bold">Il Trittico delle Tue Emozioni: «Dall'Emoticon al Contesto»</h2>
+                    <p class="text-gray-600 text-sm mt-1">Crea tre emoticon che raccontano tre stati d'animo reali che hai vissuto, ambientandole in una scena completa!</p>
+                </div>
+                <button onclick="window.print()" class="px-5 py-2.5 bg-gray-900 hover:bg-gray-800 text-white text-sm font-bold rounded-xl shadow-comic transition-all flex items-center gap-2 shrink-0">
+                    <i class="fa-solid fa-print"></i> Stampa Scheda
+                </button>
+            </div>
+
+            <!-- Fasi operative in 4 passaggi -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+                <div class="p-5 rounded-2xl bg-amber-50/80 border border-amber-200 flex flex-col justify-between">
+                    <div>
+                        <div class="text-xl font-bold text-amber-600 font-display mb-1 flex items-center gap-2">
+                            <span class="badge-step bg-amber-300 w-7 h-7 text-xs">1</span> Scelta Emozioni
+                        </div>
+                        <h4 class="font-bold text-gray-900 mb-1.5 text-sm">3 Momenti Veri</h4>
+                        <p class="text-xs text-gray-600 leading-relaxed">
+                            Pensa a 3 stati d'animo che hai provato sul serio: l'<strong>ansia di una verifica</strong>, la <strong>gioia sfrenata di un gol</strong>, la <strong>noia pesante di una domenica di pioggia</strong>.
+                        </p>
+                    </div>
+                    <span class="text-[11px] font-semibold text-amber-800 mt-3 block">Non inventare: racconta te stesso!</span>
+                </div>
+
+                <div class="p-5 rounded-2xl bg-rose-50/80 border border-rose-200 flex flex-col justify-between">
+                    <div>
+                        <div class="text-xl font-bold text-rose-600 font-display mb-1 flex items-center gap-2">
+                            <span class="badge-step bg-rose-300 w-7 h-7 text-xs">2</span> Progetta la Sagoma
+                        </div>
+                        <h4 class="font-bold text-gray-900 mb-1.5 text-sm">Forma + Colore + Segno</h4>
+                        <p class="text-xs text-gray-600 leading-relaxed">
+                            Prima di disegnare occhi e bocca, decidi:<br>
+                            • La <strong>sagoma</strong> (morbida o a spigoli?)<br>
+                            • Il <strong>colore chiave</strong> (freddo, caldo o acido?)<br>
+                            • Gli <strong>emanata</strong> (gocce, spirali, fiamme?).
+                        </p>
+                    </div>
+                    <span class="text-[11px] font-semibold text-rose-800 mt-3 block">Disegna prima a matita leggera (2H).</span>
+                </div>
+
+                <div class="p-5 rounded-2xl bg-sky-50/80 border border-sky-200 flex flex-col justify-between">
+                    <div>
+                        <div class="text-xl font-bold text-sky-600 font-display mb-1 flex items-center gap-2">
+                            <span class="badge-step bg-sky-300 w-7 h-7 text-xs">3</span> Occhi e Bocca
+                        </div>
+                        <h4 class="font-bold text-gray-900 mb-1.5 text-sm">Linee Coerenti</h4>
+                        <p class="text-xs text-gray-600 leading-relaxed">
+                            Traccia i tratti del viso: le sopracciglia inclinate all'ingiù aumentano la rabbia, curve all'insù aumentano la tristezza. Mantieni il tratto grafico deciso con il pennarello nero.
+                        </p>
+                    </div>
+                    <span class="text-[11px] font-semibold text-sky-800 mt-3 block">Usa il tratto spesso per il contorno.</span>
+                </div>
+
+                <div class="p-5 rounded-2xl bg-emerald-50/80 border-2 border-emerald-400 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="text-xl font-bold text-emerald-700 font-display mb-1 flex items-center gap-2">
+                            <span class="badge-step bg-emerald-300 w-7 h-7 text-xs">4</span> Il Contesto
+                        </div>
+                        <h4 class="font-bold text-gray-900 mb-1.5 text-sm">NO Foglio Bianco!</h4>
+                        <p class="text-xs text-gray-600 leading-relaxed">
+                            <strong>Vietato lasciare lo sfondo bianco:</strong> colora l'ambiente attorno alla testa (la stanza, la classe, il meteo o onde grafiche di energia) per spiegare <em>perché</em> provi quell'emozione!
+                        </p>
+                    </div>
+                    <span class="text-[11px] font-bold text-emerald-800 mt-3 block">Colora tutta la superficie del riquadro.</span>
+                </div>
+            </div>
+
+            <!-- Focus Didattico: Perché il contesto è fondamentale? -->
+            <div class="bg-amber-50/60 rounded-2xl p-6 border-comic">
+                <div class="flex items-center gap-3 mb-3">
+                    <span class="text-3xl">🖼️</span>
+                    <h3 class="text-2xl font-bold text-gray-900">La Regola del Contesto: «Nessuna Emozione Vive nel Vuoto»</h3>
+                </div>
+                <p class="text-sm text-gray-700 leading-relaxed mb-4">
+                    Nella vita reale non siamo mai sospesi nel nulla. Se sei in ansia, c'è un banco di scuola con un foglio davanti a te; se sei arrabbiato, c'è una porta chiusa o un cielo cupo; se sei felice, c'è la luce calda del tramonto o la musica nelle cuffie. Lo <strong>sfondo</strong> lavora insieme all'emoticon per potenziare il messaggio:
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
+                    <div class="p-3.5 rounded-xl bg-white border border-gray-300">
+                        <strong class="text-gray-900 font-bold block text-sm mb-1">🏠 1. Sfondo d'Ambiente Reale</strong>
+                        <p class="text-gray-600">Disegna oggetti e arredi: il banco e l'orologio della classe, il letto disordinato, lo schermo del telefono al buio, il campo da gioco.</p>
+                    </div>
+                    <div class="p-3.5 rounded-xl bg-white border border-gray-300">
+                        <strong class="text-gray-900 font-bold block text-sm mb-1">🌩️ 2. Sfondo Atmosferico / Meteo</strong>
+                        <p class="text-gray-600">Usa il tempo meteorologico come metafora: pioggia e nuvole grigie per la tristezza, raggi di sole e cielo limpido per la gioia, fulmini per il panico.</p>
+                    </div>
+                    <div class="p-3.5 rounded-xl bg-white border border-gray-300">
+                        <strong class="text-gray-900 font-bold block text-sm mb-1">🌀 3. Sfondo Astratto / Onde di Energia</strong>
+                        <p class="text-gray-600">Riempi lo spazio con texture e linee di forza: spirali ipnotiche per il capogiro, linee a raggiera esplosiva per l'entusiasmo, onde scure per la noia.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tabella Esempi Pratici per il Trittico -->
+            <div>
+                <h4 class="font-bold text-lg text-gray-900 mb-3 flex items-center gap-2">
+                    <i class="fa-solid fa-table-list text-amber-500"></i> Esempi di Progettazione Completa (con Sfondo)
+                </h4>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left text-sm border-2 border-gray-900 rounded-xl overflow-hidden">
+                        <thead class="bg-gray-900 text-white text-xs uppercase font-display">
+                            <tr>
+                                <th class="p-3">La Tua Emozione</th>
+                                <th class="p-3">1. Forma & Colore</th>
+                                <th class="p-3">2. Segni Grafici</th>
+                                <th class="p-3">3. Ambiente / Sfondo (Colorato!)</th>
+                                <th class="p-3">Effetto Finale</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-200 text-xs">
+                            <tr class="bg-blue-50/30">
+                                <td class="p-3 font-bold text-gray-900">1. Ansia prima della verifica</td>
+                                <td class="p-3 text-blue-700 font-semibold">Goccia schiacciata • Azzurro freddo</td>
+                                <td class="p-3">Gocce di sudore + linee tremolanti</td>
+                                <td class="p-3 text-gray-700 font-medium">Il banco in prospettiva, il foglio con la penna e un orologio a muro che segna l'inizio.</td>
+                                <td class="p-3 italic text-gray-500">Senso di freddo, fretta e instabilità.</td>
+                            </tr>
+                            <tr>
+                                <td class="p-3 font-bold text-gray-900">2. Rabbia per un'ingiustizia</td>
+                                <td class="p-3 text-red-700 font-semibold">Quadrato rigido • Rosso acceso</td>
+                                <td class="p-3">Sbuffi di vapore dalle orecchie + vena</td>
+                                <td class="p-3 text-gray-700 font-medium">Parete scura con crepe, lampada a soffitto che oscilla e linee rosse di pressione.</td>
+                                <td class="p-3 italic text-gray-500">Blocco rigido pronto a esplodere.</td>
+                            </tr>
+                            <tr class="bg-amber-50/30">
+                                <td class="p-3 font-bold text-gray-900">3. Gioia pura del venerdì sera</td>
+                                <td class="p-3 text-amber-700 font-semibold">Cerchio morbido • Giallo oro caldo</td>
+                                <td class="p-3">Stelline scintillanti + note musicali</td>
+                                <td class="p-3 text-gray-700 font-medium">Finestra aperta con tramonto arancione, zaino buttato a terra in un angolo e luce calda.</td>
+                                <td class="p-3 italic text-gray-500">Leggerezza, apertura e sollievo.</td>
+                            </tr>
+                            <tr>
+                                <td class="p-3 font-bold text-gray-900">4. Noia immobile sul divano</td>
+                                <td class="p-3 text-gray-700 font-semibold">Rettangolo orizzontale • Grigio / Salvia</td>
+                                <td class="p-3">Occhi a fessura + Zzz o spirale spenta</td>
+                                <td class="p-3 text-gray-700 font-medium">Stanza in penombra, la TV accesa che emette solo luce bluastra, cuscino schiacciato.</td>
+                                <td class="p-3 italic text-gray-500">Mancanza totale di energia e motivazione.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Istruzioni di Impaginazione sul Foglio da Disegno F4/A4 -->
+            <div class="bg-gray-900 text-white p-6 sm:p-7 rounded-2xl border-comic shadow-sm">
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="text-3xl text-amber-400">📐</span>
+                    <div>
+                        <h4 class="font-bold text-lg font-display text-amber-300">Come Impostare il Foglio da Disegno (F4 o A4 orizzontale)</h4>
+                        <p class="text-xs text-gray-300">Segui questa griglia prima di iniziare a colorare:</p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
+                    <div class="p-4 rounded-xl bg-gray-800 border border-gray-700 space-y-2">
+                        <span class="inline-block px-2 py-0.5 rounded bg-amber-400 text-gray-900 font-bold text-[10px] uppercase">Passo 1</span>
+                        <h5 class="font-bold text-white text-sm">Dividi in 3 Riquadri</h5>
+                        <p class="text-gray-300 leading-relaxed">
+                            Posiziona il foglio in <strong>orizzontale</strong>. Con riga e matita, traccia due linee verticali per ottenere <strong>3 grandi riquadri uguali</strong> (formato trittico).
+                        </p>
+                    </div>
+
+                    <div class="p-4 rounded-xl bg-gray-800 border border-gray-700 space-y-2">
+                        <span class="inline-block px-2 py-0.5 rounded bg-amber-400 text-gray-900 font-bold text-[10px] uppercase">Passo 2</span>
+                        <h5 class="font-bold text-white text-sm">Disegna l'Emoticon al Centro</h5>
+                        <p class="text-gray-300 leading-relaxed">
+                            In ciascun riquadro, disegna la tua emoticon: deve essere abbastanza grande (almeno il 40-50% del riquadro), con la sua sagoma, il colore e i segni grafici che fuoriescono.
+                        </p>
+                    </div>
+
+                    <div class="p-4 rounded-xl bg-gray-800 border border-gray-700 space-y-2">
+                        <span class="inline-block px-2 py-0.5 rounded bg-emerald-400 text-gray-900 font-bold text-[10px] uppercase">Passo 3: Fondamentale</span>
+                        <h5 class="font-bold text-emerald-300 text-sm">Riempi Tutto lo Sfondo</h5>
+                        <p class="text-gray-300 leading-relaxed">
+                            Colora l'intero sfondo fino alle cornici con pennarelli, matite o pastelli a cera. <strong>Nessun pezzetto di carta deve rimanere bianco</strong>, a meno che non sia neve o luce!
+                        </p>
+                    </div>
+                </div>
+
+                <div class="mt-4 pt-3 border-t border-gray-700 flex flex-wrap items-center justify-between gap-3 text-xs text-gray-400">
+                    <span>💡 <strong>Consiglio tecnico:</strong> Ripassa prima i bordi dell'emoticon con un pennarello nero a punta spessa per farla staccare nettamente dal suo sfondo.</span>
+                    <span class="text-amber-400 font-semibold">Tecnica consigliata: Matite colorate, pennarelli o tecnica mista</span>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8 border-t-2 border-gray-900 text-center text-xs">
+        <div class="container mx-auto px-6">
+            <p class="font-display font-bold text-sm mb-1 text-amber-400">Didattica del Segno & Comunicazione Visiva</p>
+            <p class="text-gray-400">Laboratorio per la scuola secondaria di primo grado: Forma • Colore • Segni • Contesto</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Interactive Logic -->
+    <script>
+        // State variables
+        let currentShape = 'circle';
+        let currentColor = '#FFD93D';
+        let currentSign = 'sparkles';
+        let currentColorName = 'Giallo Caldo';
+
+        // Shape SVG definitions (centered at 100, 100)
+        const shapesSvg = {
+            circle: '<circle cx="100" cy="100" r="75" fill="COLOR_PLACEHOLDER" stroke="#2D3436" stroke-width="6"/>',
+            square: '<rect x="30" y="30" width="140" height="140" rx="18" fill="COLOR_PLACEHOLDER" stroke="#2D3436" stroke-width="6"/>',
+            triangle: '<polygon points="100,24 178,168 22,168" fill="COLOR_PLACEHOLDER" stroke="#2D3436" stroke-width="6" stroke-linejoin="round"/>',
+            blob: '<path d="M100,22 C142,65 174,105 174,136 C174,170 141,180 100,180 C59,180 26,170 26,136 C26,105 58,65 100,22 Z" fill="COLOR_PLACEHOLDER" stroke="#2D3436" stroke-width="6" stroke-linejoin="round"/>'
+        };
+
+        // Render facial expression matching the shape/emotion context
+        function getFaceSvg(shape, color) {
+            let eyeY = 95;
+            let mouthY = 135;
+
+            if (shape === 'triangle') {
+                eyeY = 115;
+                mouthY = 148;
+            } else if (shape === 'blob') {
+                eyeY = 118;
+                mouthY = 150;
+            }
+
+            // If color is red or triangle: furious/angry expression
+            if (color === '#FF6B6B' || shape === 'triangle') {
+                return `
+                    <!-- Angry brows -->
+                    <line x1="60" y1="${eyeY - 14}" x2="90" y2="${eyeY - 4}" stroke="#2D3436" stroke-width="5" stroke-linecap="round"/>
+                    <line x1="140" y1="${eyeY - 14}" x2="110" y2="${eyeY - 4}" stroke="#2D3436" stroke-width="5" stroke-linecap="round"/>
+                    <!-- Eyes -->
+                    <circle cx="76" cy="${eyeY}" r="7" fill="#2D3436"/>
+                    <circle cx="124" cy="${eyeY}" r="7" fill="#2D3436"/>
+                    <!-- Angry mouth -->
+                    <path d="M 72 ${mouthY + 8} Q 100 ${mouthY - 10} 128 ${mouthY + 8}" stroke="#2D3436" stroke-width="6" fill="none" stroke-linecap="round"/>
+                `;
+            }
+
+            // If color is blue: sad / freezing expression
+            if (color === '#4D96FF') {
+                return `
+                    <!-- Sad brows -->
+                    <path d="M 60 ${eyeY - 4} Q 76 ${eyeY - 16} 92 ${eyeY - 6}" stroke="#2D3436" stroke-width="4.5" fill="none" stroke-linecap="round"/>
+                    <path d="M 108 ${eyeY - 6} Q 124 ${eyeY - 16} 140 ${eyeY - 4}" stroke="#2D3436" stroke-width="4.5" fill="none" stroke-linecap="round"/>
+                    <!-- Sad eyes -->
+                    <circle cx="76" cy="${eyeY + 2}" r="6.5" fill="#2D3436"/>
+                    <circle cx="124" cy="${eyeY + 2}" r="6.5" fill="#2D3436"/>
+                    <!-- Sad mouth -->
+                    <path d="M 74 ${mouthY + 6} Q 100 ${mouthY - 8} 126 ${mouthY + 6}" stroke="#2D3436" stroke-width="5" fill="none" stroke-linecap="round"/>
+                `;
+            }
+
+            // If square: stubborn / blank expression
+            if (shape === 'square') {
+                return `
+                    <!-- Straight brows -->
+                    <line x1="60" y1="${eyeY - 10}" x2="90" y2="${eyeY - 10}" stroke="#2D3436" stroke-width="5" stroke-linecap="round"/>
+                    <line x1="110" y1="${eyeY - 10}" x2="140" y2="${eyeY - 10}" stroke="#2D3436" stroke-width="5" stroke-linecap="round"/>
+                    <!-- Small straight eyes -->
+                    <circle cx="75" cy="${eyeY}" r="6" fill="#2D3436"/>
+                    <circle cx="125" cy="${eyeY}" r="6" fill="#2D3436"/>
+                    <!-- Straight flat mouth -->
+                    <line x1="72" y1="${mouthY}" x2="128" y2="${mouthY}" stroke="#2D3436" stroke-width="6" stroke-linecap="round"/>
+                `;
+            }
+
+            // Default happy friendly face
+            return `
+                <!-- Happy arched eyes -->
+                <path d="M 64 ${eyeY} Q 76 ${eyeY - 12} 88 ${eyeY}" stroke="#2D3436" stroke-width="5" fill="none" stroke-linecap="round"/>
+                <path d="M 112 ${eyeY} Q 124 ${eyeY - 12} 136 ${eyeY}" stroke="#2D3436" stroke-width="5" fill="none" stroke-linecap="round"/>
+                <!-- Rosy Cheeks -->
+                <circle cx="56" cy="${eyeY + 14}" r="8" fill="rgba(255, 107, 107, 0.35)"/>
+                <circle cx="144" cy="${eyeY + 14}" r="8" fill="rgba(255, 107, 107, 0.35)"/>
+                <!-- Smile -->
+                <path d="M 68 ${mouthY - 4} Q 100 ${mouthY + 18} 132 ${mouthY - 4}" stroke="#2D3436" stroke-width="6" fill="#2D3436" stroke-linecap="round"/>
+            `;
+        }
+
+        // Signs setup
+        function updateSignOverlay(sign) {
+            const top = document.getElementById('signOverlayTop');
+            const right = document.getElementById('signOverlayRight');
+            const left = document.getElementById('signOverlayLeft');
+
+            top.innerHTML = '';
+            right.innerHTML = '';
+            left.innerHTML = '';
+
+            if (sign === 'sparkles') {
+                top.innerHTML = '✨';
+                right.innerHTML = '⭐';
+                left.innerHTML = '✨';
+            } else if (sign === 'sweat') {
+                right.innerHTML = '💧';
+            } else if (sign === 'question') {
+                right.innerHTML = '❓';
+                left.innerHTML = '❔';
+            } else if (sign === 'anger') {
+                right.innerHTML = '💢';
+                top.innerHTML = '💨';
+            }
+        }
+
+        // Calculate and explain the synthesized emotion
+        function updateEmotionAnalysis() {
+            const titleEl = document.getElementById('emotionTitle');
+            const descEl = document.getElementById('emotionDescription');
+
+            let title = "";
+            let desc = "";
+
+            if (currentShape === 'triangle' && currentColor === '#FF6B6B') {
+                title = "Furia Pericolosa ⚡";
+                desc = "Triangolo (aggressività) + Rosso acceso + Segno di rabbia = Il livello massimo di ostilità ed esplosività.";
+            } else if (currentShape === 'circle' && currentColor === '#FFD93D' && currentSign === 'sparkles') {
+                title = "Felicità Solare ☀️";
+                desc = "Cerchio morbido + Giallo rassicurante + Stelline = Innocenza, allegria pura e apertura verso gli altri.";
+            } else if (currentColor === '#4D96FF') {
+                title = "Freddo Sconforto o Spavento ❄️";
+                desc = "Il blu spegne l'energia della figura; combinato con gocce o dubbi esprime tristezza, ansia o solitudine.";
+            } else if (currentShape === 'square') {
+                title = "Testardaggine o Noia Bloccata 🧱";
+                desc = "Gli angoli a 90° e i lati dritti danno rigidità. Il personaggio appare inflessibile, bloccato o imbronciato.";
+            } else if (currentColor === '#6BCB77') {
+                title = "Disgusto o Gelosia Pungente 🤢";
+                desc = "Il verde acido suggerisce repulsione fisica o invidia viscerale.";
+            } else if (currentSign === 'sweat') {
+                title = "Ansia e Pressione Psicologica 😰";
+                desc = "La singola goccia di sudore racconta una storia intera: qualcosa sta andando storto e il personaggio è sotto stress.";
+            } else {
+                title = "Mix Emozionale Personalizzato";
+                desc = `Forma: ${currentShape} • Colore: ${currentColorName} • Segno: ${currentSign}. Nota come l'occhio legge prima il colore e la sagoma!`;
+            }
+
+            titleEl.textContent = title;
+            descEl.textContent = desc;
+        }
+
+        // Master re-render function
+        function renderEmoji() {
+            const shapeContainer = document.getElementById('shapeContainer');
+            const faceFeatures = document.getElementById('faceFeatures');
+
+            let rawShape = shapesSvg[currentShape] || shapesSvg.circle;
+            shapeContainer.innerHTML = rawShape.replace('COLOR_PLACEHOLDER', currentColor);
+            faceFeatures.innerHTML = getFaceSvg(currentShape, currentColor);
+            updateSignOverlay(currentSign);
+            updateEmotionAnalysis();
+        }
+
+        // Setter functions
+        function setShape(shape) {
+            currentShape = shape;
+            document.querySelectorAll('.shape-btn').forEach(btn => {
+                if (btn.dataset.shape === shape) {
+                    btn.classList.add('active-btn', 'bg-amber-100', 'border-gray-900');
+                    btn.classList.remove('border-gray-300', 'bg-white');
+                } else {
+                    btn.classList.remove('active-btn', 'bg-amber-100', 'border-gray-900');
+                    btn.classList.add('border-gray-300', 'bg-white');
+                }
+            });
+            renderEmoji();
+        }
+
+        function setColor(hex, name) {
+            currentColor = hex;
+            currentColorName = name;
+            document.querySelectorAll('.color-btn').forEach(btn => {
+                if (btn.dataset.color === hex) {
+                    btn.classList.add('ring-4', 'ring-gray-900');
+                } else {
+                    btn.classList.remove('ring-4', 'ring-gray-900');
+                }
+            });
+            renderEmoji();
+        }
+
+        function setSign(sign) {
+            currentSign = sign;
+            document.querySelectorAll('.sign-btn').forEach(btn => {
+                if (btn.dataset.sign === sign) {
+                    btn.classList.add('active-btn', 'bg-sky-100', 'border-gray-900');
+                    btn.classList.remove('border-gray-300', 'bg-white');
+                } else {
+                    btn.classList.remove('active-btn', 'bg-sky-100', 'border-gray-900');
+                    btn.classList.add('border-gray-300', 'bg-white');
+                }
+            });
+            renderEmoji();
+        }
+
+        // Preset combinations
+        function loadPreset(type) {
+            if (type === 'furia') {
+                setShape('triangle');
+                setColor('#FF6B6B', 'Rosso Furia');
+                setSign('anger');
+            } else if (type === 'ansia') {
+                setShape('blob');
+                setColor('#4D96FF', 'Blu Freddo');
+                setSign('sweat');
+            } else if (type === 'stupore') {
+                setShape('circle');
+                setColor('#FFD93D', 'Giallo Caldo');
+                setSign('sparkles');
+            }
+        }
+
+        // Initialize display on load
+        window.addEventListener('DOMContentLoaded', () => {
+            renderEmoji();
+        });
+    </script>
+</body>
+</html>
